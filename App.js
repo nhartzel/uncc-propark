@@ -21,7 +21,18 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator style={styles.navbar}
+         tabBarOptions={{
+          activeTintColor: '#fff',
+          inactiveTintColor: 'lightgray',
+          activeBackgroundColor: '#008377',
+          inactiveBackgroundColor: '#005035',
+              style: {
+                    backgroundColor: '#CE4418',
+                    paddingBottom: 3
+              }
+       }}
+      >
         <Tab.Screen name="Decks" component={DeckScreen} />
         <Tab.Screen name="Shedule" component={SheduleScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
