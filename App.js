@@ -22,11 +22,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator style={styles.navbar}
-         tabBarOptions={{
-          activeTintColor: '#fff',
-          inactiveTintColor: 'lightgray',
-          activeBackgroundColor: '#008377',
-          inactiveBackgroundColor: '#005035',
+        screenOptions={{
+          tabBarActiveTintColor: '#fff',
+          tabBarInactiveTintColor: 'lightgray',
+          tabBarActiveBackgroundColor: '#008377',
+          tabBarInactiveBackgroundColor: '#005035',
               style: {
                     backgroundColor: '#CE4418',
                     paddingBottom: 3
