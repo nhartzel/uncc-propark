@@ -1,49 +1,34 @@
+{/*
+
+  Main file for ProPark App
+  Group 3: Nathan Hartzell, 
+
+  some code used from: https://reactnavigation.org/docs/tab-based-navigation
+
+*/}
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Deck from './components/Deck'
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import DeckScreen from './screens/deckScreen.js';
+import SettingsScreen from './screens/SettingsScreen.js';
+
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-     
-      <View style={styles.decksWrapper}>
-
-      
-
-        <Text style={styles.sectionTitle}>Decks</Text>
-        
-      
-        <View style={styles.entries}>
-          {/* This is where the decks will go */}
-          <Deck text={"North Deck"}/>
-          <Deck text={"West Deck"}/>
-        </View>
-
-      </View>
-
-
-
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Decks" component={DeckScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#E8E8E8',
-    
-    
-  },
-  decksWrapper: {
-    paddingTop: 40,
-    paddingHorizontal: 20,
-  },
-  sectionTitle: {
-    fontSize: 30,
-    fontWeight: 'bold',
-  },
-  entries: {
-    marginTop: 30,
-  },
+
 });
