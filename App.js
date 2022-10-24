@@ -14,7 +14,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import DeckScreen from './screens/deckScreen.js';
 import SettingsScreen from './screens/SettingsScreen.js';
-
+import SheduleScreen from './screens/ScheduleScreen.js';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,6 +23,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Decks" component={DeckScreen} />
+        <Tab.Screen name="Shedule" component={SheduleScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
