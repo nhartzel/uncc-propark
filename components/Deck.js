@@ -22,12 +22,12 @@ const Deck = (props) => {
 
 const styles = StyleSheet.create({
     percentageText: {
-        opacity: 1.0,
+        textAlign: 'center',
     },
     deckPercentage: {
         height: 40,
         width: 40,
-        backgroundColor: 'rgba(51, 170, 51, .4)',
+        backgroundColor: '#08EC00',
         borderRadius: 100,
         justifyContent: 'center',
         alignContent: 'center'
@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
         width: 24,
         height: 24,
         backgroundColor: '#8FC3FF',
-        opacity: 0.4,
         borderRadius: 5,
         marginRight: 15,
     },
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
     },
     item: {
-        backgroundColor: '#fff',
+        backgroundColor: '#A49665',
         padding: 15,
         borderRadius: 10,
         alignItems: 'center',

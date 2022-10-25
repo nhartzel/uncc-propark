@@ -1,19 +1,31 @@
 import Deck from '../components/Deck.js';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { deckData } from '../components/deckData.js';
 
 
 export default function DeckScreen ({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.decksWrapper}>
-                <Text style={styles.sectionTitle}>Decks</Text>
-                <View style={styles.entries}>
-                {/* This is where the decks will go */}
-            
-                <Deck text={"North Deck"}/>
               
-          </View>
+                {/*<Text style={styles.sectionTitle}>Decks</Text>
+                  need to figure out how to style the top bar better */}
+
+                <ScrollView style={styles.entries}>
+                {/* This is where the decks will go */}
+
+                {deckData.map(deck => {
+
+                  return (
+                    <Deck text={deck.name} key={deck.name + "box"}/>
+                  )
+
+                })}
+            
+                {/*<Deck text={"North Deck"}*/}
+              
+          </ScrollView>
         </View>
       </View>
     );
@@ -22,9 +34,7 @@ export default function DeckScreen ({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#E8E8E8',
-        
-        
+        backgroundColor: '#fff',
       },
       decksWrapper: {
         paddingTop: 40,
