@@ -15,6 +15,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import DeckScreen from './screens/deckScreen.js';
 import SettingsScreen from './screens/SettingsScreen.js';
 import SheduleScreen from './screens/ScheduleScreen.js';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,9 +34,34 @@ export default function App() {
               }
        }}
       >
-        <Tab.Screen name="Decks" component={DeckScreen} />
-        <Tab.Screen name="Shedule" component={SheduleScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="Decks" 
+        component={DeckScreen}
+        options={{
+          tabBarLabel: 'Decks',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="subway" color={'#fff'} size={25} />
+          ),
+        }}
+        />
+        <Tab.Screen name="Shedule"
+         component={SheduleScreen}
+         options={{
+          tabBarLabel: 'Schedule',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="calendar" color={'#fff'} size={25} />
+          ),
+        }}         
+         />
+        <Tab.Screen
+        name="Settings" 
+        component={SettingsScreen}
+        options={{
+          tabBarLabel: 'Settings',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="cog" color={'#fff'} size={25} />
+          ),
+        }}        
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
