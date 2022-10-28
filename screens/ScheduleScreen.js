@@ -2,32 +2,26 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function SheduleScreen({ navigation }) {
-    return (
-        <View>
-            <Text>Schedule Screen</Text>
+    return(
+        <View style={styles.boxContainer}>
+
+            <View style={styles.box}>
+                <View style={styles.inner}>
+                    <Text>Schedule</Text>
+                </View>
+            </View>
+
+            <View style={styles.box}>
+                <View style={styles.inner}>
+                    <Text></Text>
+                </View>
+            </View>
+
         </View>
     );
+}
 
-    const Boxes = () => {
-        return(
-            <View style={styles.boxContainer}>
-    
-                <View style={styles.box}>
-                    <View style={styles.inner}>
-                        <Text>Profile</Text>
-                    </View>
-                </View>
-    
-                <View style={styles.box}>
-                    <View style={styles.inner}>
-                        <Text></Text>
-                    </View>
-                </View>
-    
-            </View>
-        )
-    }
-    
+        
     
     const styles = StyleSheet.create({
         container: {
@@ -48,10 +42,9 @@ export default function SheduleScreen({ navigation }) {
         },
         inner: {
             flex: 1,
-            backgroundColor: 'c8c8c8',
+            backgroundColor: '#c8c8c8',
             alignItems: 'center',
             justifyContent: 'center'
         }
     
     });
-};
