@@ -1,15 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function SetteingsScreen({ navigation }) {
+export default function SettingsScreen({ navigation }) {
     return (
-        <View>
-            <Text>Settings Screen</Text>
-        </View>
-    );
-
-    const Boxes = () => {
-        return(
+ 
             <View style={styles.boxContainer}>
     
                 <View style={styles.box}>
@@ -25,9 +19,8 @@ export default function SetteingsScreen({ navigation }) {
                 </View>
     
             </View>
-        )
-    }
-    
+    );
+}
     
     const styles = StyleSheet.create({
         container: {
@@ -48,10 +41,9 @@ export default function SetteingsScreen({ navigation }) {
         },
         inner: {
             flex: 1,
-            backgroundColor: 'c8c8c8',
+            backgroundColor: '#c8c8c8',
             alignItems: 'center',
             justifyContent: 'center'
         }
     
     });
-};
