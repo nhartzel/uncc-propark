@@ -18,7 +18,7 @@ export default function DeckScreen ({ navigation }) {
                 {deckData.map(deck => {
 
                   return (
-                    <Deck text={deck.name} key={deck.name + "box"}/>
+                    <Deck text={deck.name} coordinates={deck.coordinates} key={deck.name + "box"}/>
                   )
 
                 })}

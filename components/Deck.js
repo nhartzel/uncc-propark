@@ -1,13 +1,19 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import createMapLink from 'react-native-open-maps';
+
 
 
 const Deck = (props) => {
-
+    
     return(
         <View style={styles.item}>
             <View style={styles.itemLeft}>
-                <TouchableOpacity style={styles.map}></TouchableOpacity>
+                <TouchableOpacity 
+                    title=""
+                    style={styles.map}
+                    onPress={() => createMapLink(props.coordinates)}
+                ></TouchableOpacity>
                 <Text style={styles.itemText}>{props.text}</Text>
             </View>
 
