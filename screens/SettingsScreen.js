@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView} from 'react-native';
 
 export default function SettingsScreen({ navigation }) {
     return (
  
-            <View style={styles.boxContainer}>
+            <View style={styles.Container}>
     
-                <View style={styles.box}>
+                <View style={styles.scheduleWrapper}>
                     <View style={styles.inner}>
                         <Text>Profile</Text>
                     </View>
@@ -22,28 +22,20 @@ export default function SettingsScreen({ navigation }) {
     );
 }
     
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1
-    
-        },
-        boxContainer: {
-            width: '100%',
-            height: '100%',
-            padding: 5,
-            flexDirection: 'row',
-            flexWrap: 'wrap'
-        },
-        box: {
-            width: '90%',
-            height: '15%',
-            padding: 5
-        },
-        inner: {
-            flex: 1,
-            backgroundColor: '#c8c8c8',
-            alignItems: 'center',
-            justifyContent: 'center'
-        }
-    
-    });
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+    },
+    ScheduleWrapper: {
+        paddingTop: 40,
+        paddingHorizontal: 20,
+    },
+    sectionTitle: {
+        fontSize: 30,
+        fontWeight: 'bold',
+    },
+    entries: {
+        marginTop: 30,
+    },
+}); 
